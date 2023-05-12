@@ -20,7 +20,7 @@ def msg_process(msg, tstamp):
 def say_hello(i):
     return f"Hello from Flask for the {i}-th time!" 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST', 'GET'])
 def add_task():
     for i in range(100):
         say_hello.delay(i)
